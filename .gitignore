@@ -1,4 +1,4 @@
 *main*.cs
 .vscode
 .vs
-**/obj/
+**/bin/
