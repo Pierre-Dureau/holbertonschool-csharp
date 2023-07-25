@@ -6,7 +6,12 @@ namespace _2_print_alphabet
     {
         static void Main(string[] args)
         {
-            Console.Write("abcdefghijklmnopqrstuvwxyz");
+            char let = 'a';
+
+            for (; let <= 'z'; let++)
+            {
+                Console.Write(let);
+            }
         }
     }
 }
