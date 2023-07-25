@@ -11,8 +11,8 @@ class Program
         Console.Write($"The last digit of {number} is {n} ");
         if (n > 5)
             System.Console.WriteLine("and is greater than 5");
-        else if (n < 6)
-            System.Console.WriteLine("and is less than 6");
+        else if (n != 0)
+            System.Console.WriteLine("and is less than 6 and not 0");
         else
             System.Console.WriteLine("and is 0");
     }
