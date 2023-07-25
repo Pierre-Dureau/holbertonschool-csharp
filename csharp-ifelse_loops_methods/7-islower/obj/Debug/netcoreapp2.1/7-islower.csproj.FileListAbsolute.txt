@@ -1,0 +1,11 @@
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\bin\Debug\netcoreapp2.1\7-islower.deps.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\bin\Debug\netcoreapp2.1\7-islower.runtimeconfig.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\bin\Debug\netcoreapp2.1\7-islower.runtimeconfig.dev.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\bin\Debug\netcoreapp2.1\7-islower.dll
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\bin\Debug\netcoreapp2.1\7-islower.pdb
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.csprojAssemblyReference.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.csproj.CoreCompileInputs.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.AssemblyInfoInputs.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.AssemblyInfo.cs
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.dll
+C:\Dev\Holberton\holbertonschool-csharp\csharp-ifelse_loops_methods\7-islower\obj\Debug\netcoreapp2.1\7-islower.pdb
