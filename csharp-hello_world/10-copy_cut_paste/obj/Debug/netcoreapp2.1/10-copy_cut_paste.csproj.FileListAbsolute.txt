@@ -1,0 +1,11 @@
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\bin\Debug\netcoreapp2.1\10-copy_cut_paste.deps.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\bin\Debug\netcoreapp2.1\10-copy_cut_paste.runtimeconfig.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\bin\Debug\netcoreapp2.1\10-copy_cut_paste.runtimeconfig.dev.json
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\bin\Debug\netcoreapp2.1\10-copy_cut_paste.dll
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\bin\Debug\netcoreapp2.1\10-copy_cut_paste.pdb
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.csprojAssemblyReference.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.csproj.CoreCompileInputs.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.AssemblyInfoInputs.cache
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.AssemblyInfo.cs
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.dll
+C:\Dev\Holberton\holbertonschool-csharp\csharp-hello_world\10-copy_cut_paste\obj\Debug\netcoreapp2.1\10-copy_cut_paste.pdb
