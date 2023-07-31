@@ -6,7 +6,7 @@ class Dictionary
     public static string BestScore(Dictionary<string, int> myList)
     {
         string name = "None";
-        int max = 0;
+        int max = -1;
 
         if (myList.Count == 0)
             return name;
