@@ -20,9 +20,10 @@ class MyStack
             Console.WriteLine($"Stack contains \"{search}\": True");
             while (aStack.Pop() != search)
                 continue;
-            aStack.Push(newItem);
         }
 
+        aStack.Push(newItem);
+        
         return aStack;
     }
 }
