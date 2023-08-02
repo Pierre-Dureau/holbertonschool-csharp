@@ -6,7 +6,6 @@ class List
     public static List<int> CommonElements(List<int> list1, List<int> list2)
     {
         List<int> newList = new List<int>();
-        int check = 0;
 
         foreach (var item in list1)
         {
