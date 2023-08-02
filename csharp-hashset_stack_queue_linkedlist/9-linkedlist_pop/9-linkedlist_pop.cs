@@ -5,8 +5,12 @@ class LList
 {
     public static int Pop(LinkedList<int> myLList)
     {
-        int first = myLList.First.Value;
+        int first;
 
+        if (myLList.Count == 0)
+            return 0;
+
+        first = myLList.First.Value;
         myLList.RemoveFirst();
 
         return first;
