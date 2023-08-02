@@ -15,10 +15,10 @@ class LList
         }
 
         current = myLList.First;
-        while (current.Value < n)
+        while (current.Next != null && current.Next.Value < n)
             current = current.Next;
 
-        newNode = myLList.AddBefore(current, n);
+        newNode = myLList.AddAfter(current, n);
 
         return newNode;
     }
