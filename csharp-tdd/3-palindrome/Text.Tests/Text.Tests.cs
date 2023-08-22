@@ -30,5 +30,14 @@ namespace Text.Tests
         {
             Assert.AreEqual(Str.IsPalindrome("A man, a plan, a canal: Panama."), true);
         }
+
+        /// <summary>
+        /// Test an empty string
+        /// </summary>
+        [Test]
+        public void EmptyString()
+        {
+            Assert.AreEqual(Str.IsPalindrome(""), true);
+        }
     }
 }
