@@ -30,7 +30,7 @@ namespace MyMath.Tests
         /// Maximum at the end
         /// </summary>
         [Test]
-        public void MaxOfPositiveNumbers()
+        public void MaxAtTheEnd()
         {
             Assert.AreEqual(Operations.Max(new List<int>(){2, 3, 7}), 7);
         }
