@@ -27,6 +27,15 @@ namespace MyMath.Tests
         }
 
         /// <summary>
+        /// Maximum at the end
+        /// </summary>
+        [Test]
+        public void MaxOfPositiveNumbers()
+        {
+            Assert.AreEqual(Operations.Max(new List<int>(){2, 3, 7}), 7);
+        }
+
+        /// <summary>
         /// Maximum of an empty List
         /// </summary>
         [Test]
