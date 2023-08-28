@@ -79,6 +79,9 @@ public class Square : Rectangle
 {
     private int size;
 
+    /// <summary>
+    /// Get / Set the size
+    /// </summary>
     public int Size {
         get => size;
         set
