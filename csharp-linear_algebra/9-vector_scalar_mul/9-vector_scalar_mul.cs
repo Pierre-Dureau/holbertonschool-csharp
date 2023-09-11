@@ -6,27 +6,22 @@
 class VectorMath
 {
     /// <summary>
-    /// Add 2 vectors
+    /// Multiply a vector with a scalar
     /// </summary>
-    /// <param name="vector1"> First vector </param>
-    /// <param name="vector2"> Second vector </param>
+    /// <param name="vector"> The vector </param>
+    /// <param name="scalar"> The scalar </param>
     /// <returns> The resulting vector or -1 </returns>
-    public static double[] Add(double[] vector1, double[] vector2)
+    public static double[] Multiply(double[] vector, double scalar)
     {
         int len1 = vector1.Length;
-        int len2 = vector2.Length;
 
-        if ((len1 != 2 && len1 != 3) || (len1 != len2))
-        {
+        if (len1 != 2 && len1 != 3)
             return new double[] {-1};
-        }
 
         double[] result = new double[len1];
 
         for (int i = 0; i < len1; i++)
-        {
-            result[i] = vector1[i] + vector2[i];
-        }
+            result[i] = vector1[i] * scalar;
 
         return result;
     }

@@ -6,12 +6,12 @@
 class VectorMath
 {
     /// <summary>
-    /// Add 2 vectors
+    /// Calculates dot product of either two 2D or two 3D vectors
     /// </summary>
-    /// <param name="vector1"> First vector </param>
-    /// <param name="vector2"> Second vector </param>
-    /// <returns> The resulting vector or -1 </returns>
-    public static double[] Add(double[] vector1, double[] vector2)
+    /// <param name="vector1"> The first vector </param>
+    /// <param name="vector2"> The second vector </param>
+    /// <returns> The result or -1 </returns>
+    public static double DotProduct(double[] vector1, double[] vector2)
     {
         int len1 = vector1.Length;
         int len2 = vector2.Length;
@@ -25,7 +25,7 @@ class VectorMath
 
         for (int i = 0; i < len1; i++)
         {
-            result[i] = vector1[i] + vector2[i];
+            result[i] = vector1[i] * vector2[i];
         }
 
         return result;
