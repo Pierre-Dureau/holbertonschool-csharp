@@ -15,17 +15,16 @@ class VectorMath
     {
         int len1 = vector1.Length;
         int len2 = vector2.Length;
+        double result = 0;
 
         if ((len1 != 2 && len1 != 3) || (len1 != len2))
         {
-            return new double[] {-1};
+            return -1;
         }
-
-        double[] result = new double[len1];
 
         for (int i = 0; i < len1; i++)
         {
-            result[i] = vector1[i] * vector2[i];
+            result += vector1[i] * vector2[i];
         }
 
         return result;
