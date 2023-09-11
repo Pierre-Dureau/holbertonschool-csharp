@@ -13,7 +13,7 @@ class VectorMath
     /// <returns> The resulting vector or -1 </returns>
     public static double[] Multiply(double[] vector, double scalar)
     {
-        int len1 = vector1.Length;
+        int len1 = vector.Length;
 
         if (len1 != 2 && len1 != 3)
             return new double[] {-1};
@@ -21,7 +21,7 @@ class VectorMath
         double[] result = new double[len1];
 
         for (int i = 0; i < len1; i++)
-            result[i] = vector1[i] * scalar;
+            result[i] = vector[i] * scalar;
 
         return result;
     }
