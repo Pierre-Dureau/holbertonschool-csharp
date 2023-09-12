@@ -27,6 +27,8 @@ class MatrixMath
                 result[i,j] = matrix[i,j] * scalar;
             }
         }
+
+        return result;
     }
 }
 
