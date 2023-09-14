@@ -17,7 +17,7 @@ class MatrixMath
         if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
             return new double[,] { { -1 } };
 
-        if (direction != 'x' || direction != 'y')
+        if (direction != 'x' && direction != 'y')
             return new double[,] { { -1 } };
 
         double[,] shearedMatrix = new double[2, 2];
@@ -26,7 +26,10 @@ class MatrixMath
             {0, 1}
         };
 
-        direction == 'x' ? shearedMatrix[1, 0] = factor : shearedMatrix[0, 1] = factor;
+        if (direction == 'x')
+            shearMatrix[1, 0] = factor;
+        else
+            shearMatrix[0, 1] = factor;
 
         shearedMatrix[0, 0] = Math.Round(matrix[0, 0] * shearMatrix[0, 0] + matrix[0, 1] * shearMatrix[1, 0], 2);
         shearedMatrix[0, 1] = Math.Round(matrix[0, 0] * shearMatrix[0, 1] + matrix[0, 1] * shearMatrix[1, 1], 2);
