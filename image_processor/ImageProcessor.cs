@@ -17,22 +17,15 @@ class ImageProcessor
     {
         foreach (string filename in filenames)
         {
-            try
-            {
-                // Read the original image as a byte array
-                byte[] imageData = File.ReadAllBytes(filename);
+            // Read the original image as a byte array
+            byte[] imageData = File.ReadAllBytes(filename);
 
-                // Invert the colors of the image
-                byte[] invertedData = InvertColors(imageData);
+            // Invert the colors of the image
+            byte[] invertedData = InvertColors(imageData);
 
-                // Save the inverted image with the "_inverse" suffix
-                string outputFilename = $"{Path.GetFileNameWithoutExtension(filename)}_inverse{Path.GetExtension(filename)}";
-                File.WriteAllBytes(outputFilename, invertedData);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error processing {filename}: {ex.Message}");
-            }
+            // Save the inverted image with the "_inverse" suffix
+            string outputFilename = $"{Path.GetFileNameWithoutExtension(filename)}_inverse{Path.GetExtension(filename)}";
+            File.WriteAllBytes(outputFilename, invertedData);
         }
     }
 
