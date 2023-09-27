@@ -15,20 +15,34 @@ class ImageProcessor
     /// <param name="filenames"></param>
     public static void Inverse(string[] filenames)
     {
-        foreach (string filename in filenames)
-        {
-            byte[] imageData = File.ReadAllBytes(filename);
+        Parallel.ForEach(filenames, (filename) => {
+            string baseName = Path.GetFileNameWithoutExtension(filename);
+            string extension = Path.GetExtension(filename);
+            Bitmap original = new Bitmap(filename);
+            int width = original.Width;
+            int height = original.Height;
 
-            byte[] invertedData = new byte[imageData.Length];
+            Bitmap inverted = new Bitmap(width, height);
 
-            for (int i = 0; i < imageData.Length; i++)
+            for (int x = 0; x < width; x++)
             {
-                // Invert each byte (color channel)
-                invertedData[i] = (byte)(255 - imageData[i]);
+                for (int y = 0; y < height; y++)
+                {
+                    Color originalColor = original.GetPixel(x, y);
+                    Color invertedColor = Color.FromArgb(
+                        255 - originalColor.R,
+                        255 - originalColor.G,
+                        255 - originalColor.B
+                    );
+
+                    inverted.SetPixel(x, y, invertedColor);
+                }
             }
 
-            string outputFilename = $"{Path.GetFileNameWithoutExtension(filename)}_inverse{Path.GetExtension(filename)}";
-            File.WriteAllBytes(outputFilename, invertedData);
-        }
+            inverted.Save($"{baseName}_inverse{extension}");
+
+            original.Dispose();
+            inverted.Dispose();
+        });
     }
 }
