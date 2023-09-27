@@ -45,10 +45,7 @@ class ImageProcessor
             }
         }
 
-        if (filename.StartsWith("images/"))
-            inverted.Save(filename.Substring(7), ImageFormat.Jpeg);
-        else
-            inverted.Save(filename, ImageFormat.Jpeg);
+        inverted.Save(Path.GetFileNameWithoutExtension(filename) + "_inverse.jpg", ImageFormat.Jpeg);
 
         original.Dispose();
         inverted.Dispose();
