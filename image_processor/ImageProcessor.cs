@@ -10,24 +10,42 @@ using System.Threading.Tasks;
 class ImageProcessor
 {
     /// <summary>
-    /// Inverse the color of images
+    /// public static void Inverse
     /// </summary>
-    /// <param name="filenames"> The names of all images </param>
+    /// <param name="filenames"></param>
     public static void Inverse(string[] filenames)
     {
-        foreach (var filename in filenames)
+        foreach (string filename in filenames)
         {
-            string baseName = Path.GetFileNameWithoutExtension(filename);
-            string extension = Path.GetExtension(filename);
-
-            byte[] imageData = File.ReadAllBytes(filename);
-            byte[] invertedData = new byte[imageData.Length];
-
-            for (int i = 0; i < imageData.Length; i++)
+            try
             {
-                invertedData[i] = (byte)(255 - imageData[i]);
+                // Read the original image as a byte array
+                byte[] imageData = File.ReadAllBytes(filename);
+
+                // Invert the colors of the image
+                byte[] invertedData = InvertColors(imageData);
+
+                // Save the inverted image with the "_inverse" suffix
+                string outputFilename = $"{Path.GetFileNameWithoutExtension(filename)}_inverse{Path.GetExtension(filename)}";
+                File.WriteAllBytes(outputFilename, invertedData);
             }
-            File.WriteAllBytes($"{baseName}_inverse{extension}", invertedData);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing {filename}: {ex.Message}");
+            }
         }
+    }
+
+     private static byte[] InvertColors(byte[] imageData)
+    {
+        byte[] invertedData = new byte[imageData.Length];
+
+        for (int i = 0; i < imageData.Length; i++)
+        {
+            // Invert each byte (color channel)
+            invertedData[i] = (byte)(255 - imageData[i]);
+        }
+
+        return invertedData;
     }
 }
