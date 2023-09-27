@@ -24,6 +24,8 @@ class ImageProcessor
     /// <param name="filename"> The name of the image </param>
     static void InvertColors(string filename)
     {
+        string baseName = Path.GetFileNameWithoutExtension(filename);
+        string extension = Path.GetExtension(filename);
         Bitmap original = new Bitmap(filename);
         int width = original.Width;
         int height = original.Height;
@@ -45,7 +47,7 @@ class ImageProcessor
             }
         }
 
-        inverted.Save(Path.GetFileNameWithoutExtension(filename) + "_inverse.jpg", ImageFormat.Jpeg);
+        inverted.Save($"{baseName}_inverse{extension}");
 
         original.Dispose();
         inverted.Dispose();
