@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Threading.Tasks;
 
 /// <summary>
 /// ImageProcessor class
@@ -9,12 +10,12 @@ using System.IO;
 class ImageProcessor
 {
     /// <summary>
-    /// Call the InvertColors for all image with parallelisme
+    /// Inverse the color of images
     /// </summary>
     /// <param name="filenames"> The names of all images </param>
     public static void Inverse(string[] filenames)
     {
-        foreach (var item in filenames)
+        foreach (var filename in filenames)
         {
             string baseName = Path.GetFileNameWithoutExtension(filename);
             string extension = Path.GetExtension(filename);
