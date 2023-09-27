@@ -19,31 +19,15 @@ class ImageProcessor
         {
             string baseName = Path.GetFileNameWithoutExtension(filename);
             string extension = Path.GetExtension(filename);
-            Bitmap original = new Bitmap(filename);
-            int width = original.Width;
-            int height = original.Height;
 
-            Bitmap inverted = new Bitmap(width, height);
+            byte[] imageData = File.ReadAllBytes(filename);
+            byte[] invertedData = new byte[imageData.Length];
 
-            for (int x = 0; x < width; x++)
+            for (int i = 0; i < imageData.Length; i++)
             {
-                for (int y = 0; y < height; y++)
-                {
-                    Color originalColor = original.GetPixel(x, y);
-                    Color invertedColor = Color.FromArgb(
-                        255 - originalColor.R,
-                        255 - originalColor.G,
-                        255 - originalColor.B
-                    );
-
-                    inverted.SetPixel(x, y, invertedColor);
-                }
+                invertedData[i] = (byte)(255 - imageData[i]);
             }
-
-            inverted.Save($"{baseName}_inverse{extension}");
-
-            original.Dispose();
-            inverted.Dispose();
+            File.WriteAllBytes($"{baseName}_inverse{extension}", invertedData);
         }
     }
 }
