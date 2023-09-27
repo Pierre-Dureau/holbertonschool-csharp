@@ -17,28 +17,18 @@ class ImageProcessor
     {
         foreach (string filename in filenames)
         {
-            // Read the original image as a byte array
             byte[] imageData = File.ReadAllBytes(filename);
 
-            // Invert the colors of the image
-            byte[] invertedData = InvertColors(imageData);
+            byte[] invertedData = new byte[imageData.Length];
 
-            // Save the inverted image with the "_inverse" suffix
+            for (int i = 0; i < imageData.Length; i++)
+            {
+                // Invert each byte (color channel)
+                invertedData[i] = (byte)(255 - imageData[i]);
+            }
+
             string outputFilename = $"{Path.GetFileNameWithoutExtension(filename)}_inverse{Path.GetExtension(filename)}";
             File.WriteAllBytes(outputFilename, invertedData);
         }
-    }
-
-     private static byte[] InvertColors(byte[] imageData)
-    {
-        byte[] invertedData = new byte[imageData.Length];
-
-        for (int i = 0; i < imageData.Length; i++)
-        {
-            // Invert each byte (color channel)
-            invertedData[i] = (byte)(255 - imageData[i]);
-        }
-
-        return invertedData;
     }
 }
