@@ -89,7 +89,7 @@ public class Queue<T>
     public string Concatenate()
     {
         Node node = head;
-        string str = "";
+        string str = "", space = "";
 
         if (Count() == 0)
         {
@@ -99,7 +99,10 @@ public class Queue<T>
         else if (CheckType() == typeof(string))
         {
             for (; node != null; node = node.next)
-                str += node.value + " ";
+            {
+                str += space + node.value;
+                space = " ";
+            }
             return str;
         }
         else if (CheckType() == typeof(char))
@@ -110,7 +113,7 @@ public class Queue<T>
         }
         else
         {
-            System.Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
+            System.Console.WriteLine("Concatenate is for a queue of Strings or Chars only.");
             return null;
         }
     }
