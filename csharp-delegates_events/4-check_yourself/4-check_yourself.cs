@@ -32,6 +32,7 @@ public class Player
     /// <summary> Prints the player's current health to the console. </summary>
     public void PrintHealth()
     {
+        Console.WriteLine(status);
         Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 
